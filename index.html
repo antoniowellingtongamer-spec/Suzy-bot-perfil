@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Perfil-Suzy</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bot Suzy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#fff0f6;
+--card:#ffffffcc;
+--accent:#ff7eb6;
+--accent2:#ffc2dd;
+--text:#2b2b2b;
+--muted:#8a8a8a;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+transition:all .25s cubic-bezier(.4,0,.2,1);
+}
+
+body{
+background:linear-gradient(180deg,#ffe4f0,#fff0f6);
+color:var(--text);
+min-height:100vh;
+overflow-x:hidden;
+}
+
+/* MENU */
+
+.menu{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+background:#ffffffaa;
+backdrop-filter:blur(10px);
+border:1px solid #ffffff;
+padding:10px 25px;
+border-radius:20px;
+display:flex;
+gap:30px;
+z-index:10;
+}
+
+.menu a{
+text-decoration:none;
+color:#444;
+font-size:14px;
+user-select:none;
+}
+
+.menu a:hover{
+color:var(--accent);
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+margin-top:140px;
+padding:20px;
+}
+
+/* AVATAR */
+
+.avatar-container{
+position:relative;
+width:160px;
+margin:auto;
+}
+
+.avatar{
+width:160px;
+height:160px;
+border-radius:50%;
+border:4px solid var(--accent);
+box-shadow:
+0 0 20px var(--accent),
+0 0 40px var(--accent2),
+0 0 60px var(--accent);
+animation:floatAvatar 4s ease-in-out infinite;
+overflow:hidden;
+}
+
+.avatar img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+@keyframes floatAvatar{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+/* HEARTS BACKGROUND */
+
+.hearts span{
+position:fixed;
+font-size:20px;
+color:var(--accent);
+animation:floatHeart linear forwards;
+}
+
+@keyframes floatHeart{
+
+0%{
+transform:translateY(100vh) scale(.7);
+opacity:1;
+}
+
+100%{
+transform:translateY(-10vh) scale(1.3);
+opacity:0;
+}
+
+}
+
+/* TITLES */
+
+h1{
+margin-top:20px;
+font-size:36px;
+background:linear-gradient(90deg,#ff7eb6,#ffb3d7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.tag{
+margin-top:10px;
+color:var(--muted);
+}
+
+/* ABOUT */
+
+.about{
+max-width:650px;
+margin:20px auto;
+line-height:1.6;
+font-size:15px;
+}
+
+/* BUTTONS */
+
+.buttons{
+margin-top:25px;
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:13px 25px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+}
+
+.add{
+background:var(--accent);
+color:white;
+}
+
+.support{
+border:2px solid var(--accent);
+color:var(--accent);
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px #ffb3d7;
+}
+
+/* COMMANDS */
+
+.commands{
+margin-top:90px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+padding:0 20px;
+}
+
+.commands h2{
+text-align:center;
+margin-bottom:25px;
+font-size:28px;
+}
+
+.search{
+width:100%;
+max-width:400px;
+margin:0 auto 30px auto;
+display:block;
+padding:12px 15px;
+border-radius:10px;
+border:none;
+background:#ffd9ea;
+color:#333;
+outline:none;
+}
+
+.command-card{
+background:var(--card);
+padding:18px;
+border-radius:14px;
+margin-bottom:14px;
+border:1px solid #ffd0e6;
+}
+
+.command-card:hover{
+transform:translateY(-5px);
+border:1px solid var(--accent);
+}
+
+.command-name{
+color:var(--accent);
+font-weight:700;
+margin-bottom:4px;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:80px;
+text-align:center;
+opacity:.7;
+font-size:13px;
+padding-bottom:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<nav class="menu">
+<a href="#sobre">Sobre</a>
+<a href="#commands">Comandos</a>
+<a href="#suporte">Suporte</a>
+</nav>
+
+<div class="hero" id="sobre">
+
+<div class="avatar-container">
+<div class="avatar">
+<img src="https://cdn.discordapp.com/attachments/1467330754903277683/1474242750638723113/Design_sem_nome.png?ex=69b429cd&is=69b2d84d&hm=f98a45866d90d9f13e93e52d5a13facd70039806bdef6f77becad649d99c62c0&">
+</div>
+</div>
+
+<h1>Suzy</h1>
+
+<p class="tag">Utilidades • Diversão • Economia</p>
+
+<p class="about">
+Suzy é um bot Discord múltiplas funcionalidade criado para facilitar a gestão do seu servidor.
+Com comandos em Slash (/), ele oferece funções de Economia, diversão
+e utilidades para melhorar a experiência da comunidade.
+</p>
+
+<div class="buttons">
+
+<a class="btn add" href="https://discord.com/oauth2/authorize?client_id=1467917569615859742" target="_blank">
+Adicionar Suzy
+</a>
+
+<a class="btn support" id="suporte" href="https://discord.gg/jrAYbKmD33" target="_blank">
+Servidor de Suporte
+</a>
+
+</div>
+
+</div>
+
+<section class="commands" id="commands">
+
+<h2>Comandos</h2>
+
+<input type="text" id="search" class="search" placeholder="Buscar comando...">
+
+<div class="command-card">
+<div class="command-name">/ajuda</div>
+<div>Mostra todos os comandos da Suzy..</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">/ping</div>
+<div>Mostra a latência do bot.</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">/user-info</div>
+<div>Ver informações de um usuário.</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">/avatar</div>
+<div>Ver avatar de um usuário.</div>
+</div>
+
+<div class="command-card">
+<div class="command-name">/Daily</div>
+<div>Resgata Recompensa diária.</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 Suzy Bot
+</footer>
+
+<script>
+
+/* SEARCH COMMANDS */
+
+const search = document.getElementById("search")
+
+search.addEventListener("keyup", function(){
+
+let value = search.value.toLowerCase()
+let commands = document.querySelectorAll(".command-card")
+
+commands.forEach(cmd=>{
+
+let text = cmd.innerText.toLowerCase()
+
+cmd.style.display = text.includes(value) ? "block" : "none"
+
+})
+
+})
+
+/* FLOATING HEARTS BACKGROUND */
+
+const hearts = document.querySelector(".hearts")
+
+setInterval(()=>{
+
+let heart = document.createElement("span")
+
+heart.innerHTML = "💗"
+heart.style.left = Math.random()*100 + "vw"
+heart.style.animationDuration = (4 + Math.random()*3) + "s"
+
+hearts.appendChild(heart)
+
+setTimeout(()=>{
+heart.remove()
+},7000)
+
+},500)
+
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
